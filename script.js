@@ -10,11 +10,11 @@ function onSubmit(e){
 	const promise=new Promise((resolve,reject)=>{
 		if(e.target[0].value>18){
 			 setTimeout(()=>{
-			 	resolve("Welcome, . You can vote.")
+			 	resolve(`Welcome, ${e.target[1].value}. You can vote.`)
 			 },4000)
 		}else{
 			setTimeout(()=>{
-				reject("Oh sorry . You aren't old enough.")
+				reject(`Oh sorry ${e.target[1].value}. You aren't old enough.`)
 			},4000)
 		}
 	})
